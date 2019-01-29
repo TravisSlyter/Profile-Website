@@ -1,0 +1,17 @@
+Make css changes in the main.scss file not the main.css file, which is the compiled sass from main.scss.
+
+First we created the package.json file using the terminal:
+npm init
+
+Then to install sass, using terminal:
+npm install node-sass
+
+Now in the package.json file in the scripts object change "test" to "sass": and the value to "node-sass -w scss/ -o dist/css/ --recursive" what this means is we are running the node-sass program, -w is watching the scss/file and -o outputting or compiling it into the dist/css/main file. The -- recursive fixes some of the problems we would have with auto reload.
+
+We can then in the terminal:
+npm run sass
+
+it will watch our scss file and auto compile it into main.css.
+
+We also created a gitignore file and typed in the name of the node_modules folder so it will not get pushed to git when we do that.
+
