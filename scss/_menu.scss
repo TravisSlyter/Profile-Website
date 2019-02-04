@@ -50,7 +50,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    opacity: 0.8;
+    //opacity: .9;
     visibility: hidden;
 
     &.show {
@@ -74,6 +74,7 @@
         padding: 0;
         background: darken($primary-color, 5);
         list-style: none;
+        opacity: .9; // 
         
         //brings the menu down
         transform: translate3d(0, -100%, 0);
@@ -87,7 +88,7 @@
 
     //branding side
     &-branding {
-        background: $primary-color;
+        background: rgba(68, 68, 68, .7);
         transform: translate3d(0, 100%, 0);
         @include easeOut;
         
